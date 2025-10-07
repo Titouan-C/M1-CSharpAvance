@@ -1,4 +1,5 @@
 ﻿using DataSources;
+using System.Xml.Linq;
 
 // See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
@@ -82,20 +83,32 @@ var allAlbums = ListAlbumsData.ListAlbums;
 //}
 
 // --- Exercice 7: Search into a text file
-Console.WriteLine("Enter your search string:");
-var searchString = Console.ReadLine();
-var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Text", "Albums.txt");
-if (!File.Exists(filePath))
-{
-    Console.WriteLine("File not found.");
-    return;
-}
-var lines = File.ReadAllLines(filePath);
-var searchResults =
-    from line in lines
-    let affichage = $"    {line}"
-    where line.Contains(searchString, StringComparison.OrdinalIgnoreCase)
-    orderby line
-    select affichage;
-foreach (var result in searchResults)
-    Console.WriteLine(result);
+//Console.WriteLine("Enter your search string:");
+//var searchString = Console.ReadLine();
+//var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Text", "Albums.txt");
+//if (!File.Exists(filePath))
+//{
+//    Console.WriteLine("File not found.");
+//    return;
+//}
+//var lines = File.ReadAllLines(filePath);
+//var searchResults =
+//    from line in lines
+//    let affichage = $"    {line}"
+//    where line.Contains(searchString, StringComparison.OrdinalIgnoreCase)
+//    orderby line
+//    select affichage;
+//foreach (var result in searchResults)
+//    Console.WriteLine(result);
+
+// -- Exercice 8: Transform a list into a XML file
+XElement allXMLAlbums = new XElement("Albums",
+    from album in allAlbums
+    orderby album.AlbumId
+    select new XElement("Album",
+                new XAttribute("Id", album.AlbumId),
+                new XElement("Title", album.Title),
+                new XElement("ArtistId", album.ArtistId)
+            )
+    );
+Console.WriteLine(allXMLAlbums);
