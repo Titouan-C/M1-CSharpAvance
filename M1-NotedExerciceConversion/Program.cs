@@ -1,8 +1,10 @@
 ﻿// Logiciel de conversion d'un CSV vers un JSON avec LINQ
+
+// Un exemple de CSV est disponible dans "CSV\import_places_salon_provence copy.csv"
 // Le CSV est au format :
 // "Name";"Longitude";"Latitude";"Description";"Categories"
 // "Name1";"Longitude1";"Latitude1";"Description1";"Category1;Category2"
-//
+
 // Le JSON est au format :
 // [
 //   {
