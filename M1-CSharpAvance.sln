@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSources", "DataSources\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M1-NotedExerciceConversion", "M1-NotedExerciceConversion\M1-NotedExerciceConversion.csproj", "{849E4EF4-1B35-4423-87C6-532A2BE247DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M1-PerformanceTesting", "M1-PerformanceTesting\M1-PerformanceTesting.csproj", "{B6BE46FC-5997-4C13-9383-DF7AF59F67F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{849E4EF4-1B35-4423-87C6-532A2BE247DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{849E4EF4-1B35-4423-87C6-532A2BE247DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{849E4EF4-1B35-4423-87C6-532A2BE247DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6BE46FC-5997-4C13-9383-DF7AF59F67F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6BE46FC-5997-4C13-9383-DF7AF59F67F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6BE46FC-5997-4C13-9383-DF7AF59F67F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6BE46FC-5997-4C13-9383-DF7AF59F67F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
